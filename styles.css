@@ -1,0 +1,245 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+}
+header {
+    position: -webkit-sticky;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
+#logo {
+    display: flex;
+    align-items: flex-end;
+    padding: 7px 15px;
+}
+#logo img {
+    width: 40px;
+}
+#logo span{
+    color: white;
+    font-size: 30px;
+    padding-left: 8px;
+}
+#nav-bar {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+#nav-bar a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    height: 100%;
+    padding: 0 12px;
+    line-height: 50px;
+}
+#nav-bar a:hover{
+    background-color: white;
+    color: black;
+}
+#top-title {
+    background-color: #fbfbfb;
+}
+
+#main {
+    margin-top: 50px;
+    background-color: #fbfbfb;
+}
+#top-title h1{
+    background: linear-gradient(180deg, 
+    black 2%, #fbfbfb 20%, #fbfbfb);
+    font-size: 4rem;
+    text-align: center;
+    padding: 150px 0;
+    margin: 0;
+    z-index: 1;
+}
+#top-title span{
+    color: #fde779;
+}
+#main-image img {
+    width: 70%;
+    display: block;
+    margin: auto;
+    margin-top: -90px;
+    z-index:0;
+    transition: 2s;
+}
+
+#feat-prices-container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 5px 1fr;
+}
+#features {
+    padding: 8px;
+    height: 100%;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+#features h1 {
+    text-align: center;
+    font-size: 2rem;
+    width: min-content;
+    margin: auto;
+    border-bottom: 2px solid black;
+}
+.list-features-main {
+    list-style-type: none;
+    padding: 20px;
+    border: 2px solid grey;
+    margin: 20px auto;
+    width: max-content;
+    border-radius: 5px;
+    background-color: white;
+    transition: 0.5s;
+}
+.list-features-main li {
+    padding: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 300;
+}
+.list-features-others {
+    list-style-type: square;
+    padding: 0;
+    padding-left: 10px;
+    width: fit-content;
+    margin: 40px auto;
+    font-size: 1.1rem;
+}
+#prices {
+    padding: 8px;
+    height: 100%;
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+#prices h1 {
+    text-align: center;
+    font-size: 2rem;
+    width: min-content;
+    margin: auto;
+    border-bottom: 2px solid black;
+    grid-column: 2/3;
+}
+.price-container {
+    margin-top: 3rem;
+}
+.price-inner {
+    border: 2px solid #333;
+    border-radius: 8px;
+    width: 50%;
+    min-width: 300px;
+    margin: 12px auto;
+    padding: 20px;
+    transition: 100ms;
+}
+.price-inner:hover {
+    box-shadow: 0 0 3px 3px grey;
+    transform: translate(1px, 1px);
+}
+.price-inner h3 {
+    margin: 5px 0;
+    font-size: 1.5rem;
+}
+.price-inner p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #444;
+}
+.paise {
+    font-style: italic;
+    font-size: 0.9rem;
+    padding-left: 4px;
+}
+.price-select {
+    background-color: green;
+    font-size: 1.2rem;
+    padding: 5px;
+    border: 2px solid green;
+    outline: none;
+    border-radius: 30px;
+    color: white;
+    width: 100%;
+}
+.price-select:hover {
+    background-color: white;
+    color: green;
+}
+.vertical-bar {
+    background-color: grey;
+    border-radius: 10px;
+    box-shadow: 0 0 2px grey;
+}
+#contact-us {
+    margin-top: 40px;
+    padding:1px;
+}
+#contact-us h3 {
+    font-size: 2rem;
+    width: max-content;
+    margin: auto;
+    border-bottom: 2px solid black;
+}
+#form {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    flex-wrap: wrap;
+}
+#email {
+    margin-right: 20px;
+    font-size: 1.2rem;
+    padding: 4px;
+    border-radius: 20px;
+    width: 400px;
+    border: 1px solid #eee;
+}
+input[type="submit"] {
+    background-color: #fde779;
+    font-size: 1.2rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 3px solid #fde779;
+}
+footer {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+footer a{
+    color: white;
+}
+
+@media screen and (max-width: 550px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    #logo {
+        display: none;
+    }
+    #main-image img{
+        width: 100%;
+    }
+    #feat-prices-container {
+        display: block;
+    }
+    #email {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
